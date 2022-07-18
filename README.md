@@ -2,7 +2,7 @@
 
 Software system to support a "bike-share program" in Glasgow. 
 
-	o Name of Application : Rent&Ride
+	o Name of Application: Rent&Ride
 	o Language Used: JAVA 8
 	o Framework: Spring MVC/ Hibernate
 	o DB Used: MySql Workbench 8.0
