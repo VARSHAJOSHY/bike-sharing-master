@@ -8,6 +8,13 @@ pipeline {
             steps {
                 echo 'Building..'
                 bat 'mvn clean install'
+                bat 'mvn package'
+            }
+            post{
+                success{
+                    echo 'Archiving the artifcacts'
+                    archiveArtifacts artifacts: '**/target/*.war'
+                }
             }
         }
         stage('Test') {
@@ -17,7 +24,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying on tomcat server'
             }
         }
     }
