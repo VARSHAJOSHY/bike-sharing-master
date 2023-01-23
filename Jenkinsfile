@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                bat 'mvn clean compile'
+                bat 'mvn clean - f ("bike-sharing-master/RentBike/pom.xml") compile'
             }
         }
         stage('Test') {
